@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #f9ebe0;
+  font-family: "Pontano Sans", sans-serif; }
+
+.board {
+  width: 1206px;
+  margin: 0 auto;
+  background-color: #0d2149;
+  border-radius: 5px; }
+  .board .top-container {
+    margin: 0 auto;
+    text-align: center; }
+    .board .top-container h1 {
+      font-family: "Fredericka the Great", cursive;
+      padding: 20px 0 0 0;
+      text-align: center;
+      color: #f9ebe0;
+      letter-spacing: 2px; }
+    .board .top-container .create-column {
+      min-width: 160px;
+      height: 30px;
+      margin: 0 0 20px 0;
+      background-color: #0d2149;
+      color: #f9ebe0;
+      border: 1px solid #f9ebe0;
+      font-weight: 600;
+      border-radius: 5px; }
+      .board .top-container .create-column:hover {
+        background-color: #f9ebe0;
+        color: #0d2149;
+        cursor: pointer; }
+
+.column {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  transition: 0.3s;
+  float: left;
+  margin-right: 1px;
+  padding-right: 5px; }
+  .column .columnheader {
+    position: relative;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #208aae;
+    border-radius: 5px; }
+    .column .columnheader h2 {
+      color: #f9ebe0;
+      font-size: 18px;
+      text-align: center;
+      letter-spacing: 2px; }
+    .column .columnheader .btn-delete, .column .columnheader .btn-add-card {
+      border: 1px solid #f9ebe0;
+      background-color: #208aae;
+      border-radius: 3px;
+      color: #f9ebe0;
+      font-weight: bold; }
+      .column .columnheader .btn-delete:hover, .column .columnheader .btn-add-card:hover {
+        background-color: #f9ebe0;
+        color: #208aae;
+        cursor: pointer; }
+    .column .columnheader .btn-add-card {
+      float: right; }
+    .column .columnheader .column-title {
+      font-family: "Fredericka the Great", cursive;
+      letter-spacing: 2px;
+      font-weight: 300; }
+  .column .column-card-list {
+    list-style-type: none;
+    padding-left: 0;
+    height: calc(100vh - 313px);
+    overflow-x: hidden;
+    overflow-y: auto; }
+    .column .column-card-list .card {
+      position: relative;
+      background-color: #9d8189;
+      border-radius: 5px;
+      padding: 12px 12px 2px 12px;
+      margin-bottom: 10px;
+      cursor: move;
+      color: #f9ebe0; }
+      .column .column-card-list .card .btn-delete {
+        border: 1px solid #f9ebe0;
+        background-color: #9d8189;
+        border-radius: 3px;
+        font-weight: bold;
+        color: #f9ebe0; }
+        .column .column-card-list .card .btn-delete:hover {
+          background-color: #f9ebe0;
+          color: #9d8189; }
+
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }
+
+/*# sourceMappingURL=style.css.map */

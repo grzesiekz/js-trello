@@ -1,0 +1,111 @@
+$dark-blue: #0d2149
+$mid-blue: #208aae
+$powder-beige: #f9ebe0
+$cocoa-brown: #9d8189
+$eggplant-red: #42033d
+
+@mixin stdradius
+  border-radius: 5px
+
+*
+  box-sizing: border-box
+
+body
+  background-color: $powder-beige
+  font-family: 'Pontano Sans', sans-serif
+
+.board 
+  width: 1206px
+  margin: 0 auto
+  background-color: $dark-blue
+  @include stdradius
+  .top-container
+    margin: 0 auto
+    text-align: center
+    h1 
+      font-family: 'Fredericka the Great', cursive
+      padding: 20px 0 0 0
+      text-align: center
+      color: $powder-beige
+      letter-spacing: 2px
+    .create-column 
+      min-width: 160px
+      height: 30px
+      margin: 0 0 20px 0
+      background-color: $dark-blue
+      color: $powder-beige
+      border: 1px solid $powder-beige
+      font-weight: 600
+      @include stdradius
+      &:hover
+        background-color: $powder-beige
+        color: $dark-blue
+        cursor: pointer
+
+
+.column 
+  position: relative
+  display: inline-block
+  width: 200px
+  transition: .3s
+  float: left
+  margin-right: 1px
+  padding-right: 5px
+  .columnheader
+    position: relative
+    padding: 10px
+    margin-top: 5px
+    background-color: $mid-blue
+    @include stdradius
+    h2
+      color: $powder-beige
+      font-size: 18px
+      text-align: center
+      letter-spacing: 2px
+    .btn-delete, .btn-add-card 
+      border: 1px solid $powder-beige
+      background-color: $mid-blue
+      border-radius: 3px
+      color: $powder-beige
+      font-weight: bold
+      &:hover
+        background-color: $powder-beige
+        color: $mid-blue
+        cursor: pointer
+    .btn-add-card
+      float: right
+    .column-title
+      font-family: 'Fredericka the Great', cursive
+      letter-spacing: 2px
+      font-weight: 300
+  .column-card-list 
+    list-style-type: none
+    padding-left: 0
+    height: calc(100vh - 313px)
+    overflow-x: hidden
+    overflow-y: auto 
+    .card 
+      position: relative
+      background-color: $cocoa-brown
+      @include stdradius
+      padding: 12px 12px 2px 12px
+      margin-bottom: 10px
+      cursor: move
+      color: $powder-beige
+      .btn-delete
+        border: 1px solid $powder-beige
+        background-color: $cocoa-brown
+        border-radius: 3px
+        font-weight: bold
+        color: $powder-beige
+        &:hover
+          background-color: $powder-beige
+          color: $cocoa-brown
+
+.clearfix:before, .clearfix:after 
+  content: ""
+  display: table
+  clear: both
+
+.clearfix  
+  *zoom: 1 
